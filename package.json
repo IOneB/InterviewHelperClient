@@ -1,17 +1,17 @@
 {
-  "name": "mongo-bongo",
+  "name": "little-interview-helper",
   "version": "0.1.0",
   "private": true,
-  "postinstall": "npm run build",
-  "start" : "node server.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@quasar/extras": "^1.0.0",
     "core-js": "^3.6.5",
     "express": "^4.17.2",
+    "quasar": "^2.0.0",
     "serve-static": "^1.14.2",
     "vue": "^3.0.0"
   },
@@ -30,11 +30,14 @@
     "eslint-plugin-vue": "^7.1.0",
     "less": "^3.12.2",
     "less-loader": "^7.0.2",
-    "prettier": "^2.1.2"
+    "prettier": "^2.1.2",
+    "vue-cli-plugin-quasar": "~4.0.4"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "postinstall": "npm run build",
+  "start": "node server.js"
 }
