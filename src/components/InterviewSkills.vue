@@ -1,7 +1,10 @@
 <template>
   <div class="row" v-for="columnsSkills in rowSkills" :key="columnsSkills">
     <div class="col row" v-for="skill in columnsSkills" :key="skill">
-      <q-card class="m-a-md w-100">
+      <q-card
+        class="m-a-md w-100"
+        :class="{ 'active-skill': currentSkillActive(skill.id) }"
+      >
         <q-card-section>
           <div class="row">
             <p class="col">
@@ -41,13 +44,22 @@
 
 <script>
 export default {
-  props: ["skills"],
+  props: ["skills", "activeSkill", "currentGrade"],
   data() {
     return {
       skillOptions: ["", "-", "+", "+/-"],
     };
   },
-  created() {},
+  methods: {
+    currentSkillActive(skillId) {
+      return (
+        this.activeSkill &&
+        this.currentGrade.subject === this.activeSkill.subject &&
+        this.currentGrade.grade === this.activeSkill.grade &&
+        skillId === this.activeSkill.skill
+      );
+    },
+  },
   computed: {
     rowSkills() {
       const columns = [];
@@ -77,5 +89,9 @@ export default {
 
 .w-100 {
   width: 100%;
+}
+
+.active-skill {
+  background-color: red !important;
 }
 </style>

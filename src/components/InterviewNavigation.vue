@@ -5,7 +5,7 @@
         <q-item
           clickable
           v-ripple
-          :active="subject.id === activeId"
+          :active="subject.id === currentSubject"
           @click="activate(subject.id)"
           v-for="subject in subjects"
           :key="subject.id"
@@ -23,6 +23,7 @@
 
 <script>
 export default {
+  props: ["subjects", "currentSubject"],
   data() {
     return {
       drawerLeft: true,
@@ -31,11 +32,8 @@ export default {
   },
   methods: {
     activate(id) {
-      this.activeId = id;
-
       this.$emit("activate", id);
     },
   },
-  props: ["subjects"],
 };
 </script>

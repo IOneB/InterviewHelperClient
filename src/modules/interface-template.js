@@ -379,20 +379,20 @@ function createSubjects() {
     Wpf: new Subject("WPF", [
       {
         grade: 0,
-        skills: [{ id: 0, skill: "не использовал" }],
+        skills: [{ id: 0, skill: "Не использовал" }],
       },
       {
         grade: 1,
         skills: [
           {
             id: 0,
-            skill: "есть простой пет проект с использованием фреймворка",
+            skill: "Есть простой пет проект с использованием фреймворка",
           },
         ],
       },
       {
         grade: 3,
-        skills: [{ id: 0, skill: "есть базовые знания о фреймворке" }],
+        skills: [{ id: 0, skill: "Есть базовые знания о фреймворке" }],
       },
       {
         grade: 5,
@@ -831,8 +831,9 @@ function createSubjects() {
     ]),
   };
 
-  /* eslint-disable-next-line */
-  for (const id of Object.keys(template)) template[id].id = id;
+  Object.keys(template).forEach((id) => {
+    template[id].id = id;
+  });
 
   return template;
 }

@@ -7,7 +7,11 @@
   >
     <div class="col">
       <h5>Оценка {{ point.grade }}</h5>
-      <interview-skills :skills="point.skills" />
+      <interview-skills
+        :activeSkill="activeSkill"
+        :currentGrade="{ subject: subject.id, grade: point.grade }"
+        :skills="point.skills"
+      />
       <hr />
     </div>
   </div>
@@ -17,7 +21,7 @@
 import InterviewSkills from "./InterviewSkills.vue";
 
 export default {
-  props: ["subject", "show"],
+  props: ["subject", "show", "activeSkill"],
   components: {
     InterviewSkills,
   },
