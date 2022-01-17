@@ -5,14 +5,14 @@
       <q-page-container>
         <q-page class="q-pa-md">
           <div v-for="subject in subjects" :key="subject.id">
-            <div
-              class="bg-red full-width"
-              :subject="subject"
+            <interview-candidates
+              @reload="load"
+              :candidates="candidates"
               v-show="subject.id === currentSubject"
               v-if="subject.id === 'Candidates'"
             >
               {{ subject.id === "Candidates" }}
-            </div>
+            </interview-candidates>
             <interview-page
               v-else
               :subject="subject"
@@ -31,25 +31,24 @@ import interfaceModule from "./modules/interface-template";
 
 import InterviewNavigation from "./components/InterviewNavigation.vue";
 import InterviewPage from "./components/InterviewPage.vue";
+import InterviewCandidates from "./components/InterviewCandidates.vue";
 
 export default {
   data() {
     return {
-      data: "loaded",
-      url: parameters.serverAddress,
+      candidates: [],
       subjects: interfaceModule.createSubjects(),
       currentSubject: "",
     };
   },
   async created() {
-    // try {
-    //   const resp = await fetch(this.url);
-    //   this.data = await resp.text();
-    // } catch (error) {
-    //   this.data = error;
-    // }
+    await this.load();
   },
   methods: {
+    async load() {
+      const resp = await fetch(parameters.serverAddress);
+      this.candidates = await resp.json();
+    },
     activateSection(id) {
       this.currentSubject = id;
     },
@@ -86,6 +85,7 @@ export default {
   components: {
     InterviewNavigation,
     InterviewPage,
+    InterviewCandidates,
   },
 };
 </script>
