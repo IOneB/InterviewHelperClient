@@ -105,6 +105,7 @@ function createSubjects() {
           { id: 2, skill: "Вирутальные" },
           { id: 3, skill: "Статические" },
           { id: 4, skill: "Абстрактные" },
+          { id: 9, skill: "Интерфейсы" },
           { id: 5, skill: "Делегаты" },
           { id: 6, skill: "Action, Predicate, Func" },
           { id: 7, skill: "Лямбда" },
@@ -142,9 +143,20 @@ function createSubjects() {
           },
           { id: 3, skill: "Профайлинге и оптимизация кода" },
           {
+            id: 9,
+            skill: "Монитор, индекс блока синхронизации",
+          },
+          {
             id: 4,
-            skill:
-              "Синхронизация потоков (мьютекс, семафор, монитор, autoreset event, manualresetevent, volatile, атомарные операции)",
+            skill: "Мьютекс, семафор",
+          },
+          {
+            id: 10,
+            skill: "Autoreset event, manualresetevent,",
+          },
+          {
+            id: 11,
+            skill: "Volatile, атомарные операции",
           },
           { id: 5, skill: "Связность кода + решение" },
           { id: 6, skill: "async/await" },
@@ -481,12 +493,13 @@ function createSubjects() {
           },
           {
             id: 3,
-            skill: "Code first, DB first, Model first, Migration, Fuent Api",
+            skill: "Code first, DB first, Model first, ",
           },
           {
             id: 4,
             skill: "Context, Transactions",
           },
+          { id: 5, skill: "Migration, Fuent Api" },
         ],
       },
       {
@@ -561,6 +574,14 @@ function createSubjects() {
           {
             id: 0,
             skill: "Знает что такое первичный, внешний, составной ключи",
+          },
+          {
+            id: 8,
+            skill: "Join",
+          },
+          {
+            id: 9,
+            skill: "Типы связей в реляционных базах данных",
           },
           {
             id: 1,
