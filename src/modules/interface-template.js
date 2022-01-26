@@ -59,6 +59,7 @@ function createSubjects() {
               "Уверенно делает код ревью (знает, что такое чистый и поддерживаемый код)",
           },
           { id: 8, skill: "Знает основные паттерны проектирования" },
+          { id: 9, skill: "Пишет тесты" },
         ],
       },
       {
@@ -119,12 +120,13 @@ function createSubjects() {
           { id: 1, skill: "IEnumerator" },
           { id: 2, skill: "IClonable" },
           { id: 3, skill: "IEnumerable" },
-          { id: 4, skill: "stack и куча" },
+          { id: 4, skill: "стек и куча" },
           { id: 5, skill: "using" },
           { id: 6, skill: "boxing unboxing" },
           { id: 7, skill: "Дженерики" },
           { id: 8, skill: "ref, in, out" },
-          { id: 9, skill: "Тесты" },
+          { id: 9, skill: "StringBuilder" },
+          { id: 10, skill: "Dictionary, List" },
         ],
       },
       {
@@ -141,10 +143,10 @@ function createSubjects() {
             skill:
               "Многопоточность (контекст синхронизации, выполнения. дедлоки)",
           },
-          { id: 3, skill: "Профайлинге и оптимизация кода" },
           {
             id: 9,
-            skill: "Монитор, индекс блока синхронизации",
+            skill:
+              "Монитор, индекс блока синхронизации (блокировки уровня ядра)",
           },
           {
             id: 4,
@@ -154,14 +156,18 @@ function createSubjects() {
             id: 10,
             skill: "Autoreset event, manualresetevent,",
           },
+          { id: 11, skill: "PLINQ" },
           {
-            id: 11,
-            skill: "Volatile, атомарные операции",
+            id: 12,
+            skill: "Concurrent collections",
           },
-          { id: 5, skill: "Связность кода + решение" },
-          { id: 6, skill: "async/await" },
+          { id: 5, skill: "Связность кода, связанность" },
+          { id: 6, skill: "async/await (контекст синхронизации)" },
+          { id: 13, skill: "Task.Run, IO/CPU Bound" },
+          { id: 14, skill: "When all" },
           { id: 7, skill: "утечки памяти, weak reference" },
           { id: 8, skill: "IObservable" },
+          { id: 3, skill: "Профайлинг и оптимизация кода" },
         ],
       },
       {
@@ -177,6 +183,8 @@ function createSubjects() {
             id: 2,
             skill: "Участвует в разработке одного из популярных фреймворка",
           },
+          { id: 3, skill: "unsafe" },
+          { id: 4, skill: "span" },
         ],
       },
     ]),
@@ -798,7 +806,7 @@ function createSubjects() {
           {
             id: 9,
             skill:
-              "Circuit Braker? (Какие реализации в asp (polly))Какие еще клауд паттерны знает",
+              "Circuit Braker? (Какие реализации в asp (polly))Какие еще клауд паттерны знает (retry)",
           },
           { id: 10, skill: "Saga паттерн/Compensating transactions" },
           { id: 11, skill: "Шардинг /партиционирование? Что такое репликация" },
