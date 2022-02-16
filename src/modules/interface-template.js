@@ -297,6 +297,10 @@ function createSubjects() {
         grade: 5,
         skills: [
           {
+            id: 4,
+            skill: "Коды ответов",
+          },
+          {
             id: 0,
             skill: "POST/GET",
           },
@@ -360,6 +364,10 @@ function createSubjects() {
       {
         grade: 5,
         skills: [
+          {
+            id: 7,
+            skill: "Состав HTTP",
+          },
           {
             id: 0,
             skill: "Знает отличия .NET Framework и .NET Core. ",
@@ -513,6 +521,10 @@ function createSubjects() {
       {
         grade: 7,
         skills: [
+          {
+            id: 4,
+            skill: "Проблемы многопоточной работы. Timestamp",
+          },
           {
             id: 0,
             skill:
