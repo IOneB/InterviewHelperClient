@@ -249,9 +249,10 @@ function createSubjects() {
           },
           {
             id: 8,
-            skill: "Antiforgery, CORS, Routing",
+            skill: "Antiforgery, CORS",
           },
           { id: 9, skill: "T4MVC" },
+          { id: 10, skill: "Routing" },
         ],
       },
       {
@@ -373,7 +374,11 @@ function createSubjects() {
             skill: "Знает отличия .NET Framework и .NET Core. ",
           },
           { id: 1, skill: "Middleware" },
-          { id: 2, skill: "DI" },
+          {
+            id: 2,
+            skill: "DI",
+            how: "Способы внедрения",
+          },
           { id: 3, skill: "Lifecycle" },
           { id: 4, skill: "Partial" },
           { id: 5, skill: "ViewComponent" },
